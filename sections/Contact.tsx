@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function Contact() {
   return (
-    <section id="contact" className="bg-white py-16 px-6">
+    <section id="contato" className="bg-white py-16 px-6">
       <div className="max-w-360 mx-auto flex justify-between flex-wrap gap-12">
         <div className="space-y-12">
           <div className="space-y-6 text-left max-w-xl">

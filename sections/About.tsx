@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function About() {
   return (
-    <section id="about" className="bg-black py-16 space-y-12 px-6">
+    <section id="sobre" className="bg-black py-16 space-y-12 px-6">
       <div className="max-w-360 mx-auto flex justify-center gap-12 flex-wrap md:flex-nowrap">
         <div className="space-y-6 text-left w-full bg-linear-30 from-primary/45 to-white/5 p-7 rounded-3xl border border-white/10">
           <span className="block leading-relaxed font-normal text-secondary text-base">Autor</span>

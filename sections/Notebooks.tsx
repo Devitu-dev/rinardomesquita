@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function Notebooks() {
   return (
-    <section className="bg-gray py-16 space-y-12 px-6">
+    <section id="cadernos" className="bg-gray py-16 space-y-12 px-6">
       <div className="max-w-360 mx-auto flex items-baseline-last justify-between flex-wrap gap-6 md:gap-0">
         <div className="space-y-6 text-left max-w-xl">
           <span className="block leading-relaxed font-normal text-black/80 text-xl">Cadernos</span>

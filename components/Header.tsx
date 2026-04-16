@@ -1,25 +1,67 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-type TSections = 'home' | 'cadernos' | 'ritos' | 'contato' | 'sobre';
+type TSections = 'home' | 'cadernos' | 'contato' | 'sobre';
+
+const navItems: Array<{ href: `/#${TSections}`; label: string; section: TSections }> = [
+  { href: '/#home', label: 'Home', section: 'home' },
+  { href: '/#cadernos', label: 'Cadernos', section: 'cadernos' },
+  { href: '/#sobre', label: 'Sobre', section: 'sobre' },
+  { href: '/#contato', label: 'Contato', section: 'contato' },
+];
+
+const sectionOrder: TSections[] = ['home', 'cadernos', 'sobre', 'contato'];
 
 function Header() {
   const [section, setSection] = useState<TSections>('home');
+
+  useEffect(() => {
+    const updateCurrentSection = () => {
+      const scrollPosition = window.scrollY + 140;
+
+      let currentSection: TSections = 'home';
+
+      for (const sectionId of sectionOrder) {
+        const element = document.getElementById(sectionId);
+
+        if (!element) {
+          continue;
+        }
+
+        if (element.offsetTop <= scrollPosition) {
+          currentSection = sectionId;
+        }
+      }
+
+      setSection(currentSection);
+    };
+
+    updateCurrentSection();
+    window.addEventListener('scroll', updateCurrentSection, { passive: true });
+    window.addEventListener('resize', updateCurrentSection);
+
+    return () => {
+      window.removeEventListener('scroll', updateCurrentSection);
+      window.removeEventListener('resize', updateCurrentSection);
+    };
+  }, []);
+
   return (
-    <nav className="flex items-center justify-between py-5 px-10 fixed w-full top-0 border-b border-black/10 bg-white/80 backdrop-blur-md">
-      <a className="uppercase text-primary font-semibold text-xl hover:text-secondary" href="">
+    <nav className="fixed top-0 z-10 hidden w-full items-center justify-between border-b border-black/10 bg-white/80 px-10 py-5 backdrop-blur-md md:flex">
+      <Link href="/" className="text-xl font-semibold uppercase text-primary hover:text-secondary">
         Rinardo Mesquita
-      </a>
-      <ul className="flex items-center justify-evenly gap-6 text-black/80 py-1">
-        <li className="hover:text-secondary cursor-pointer relative">
-          Home
-          {section === 'home' && <div className="h-px w-full bg-primary absolute bottom-0" />}
-        </li>
-        <li className="hover:text-secondary cursor-pointer">Cadernos</li>
-        <li className="hover:text-secondary cursor-pointer">Ritos</li>
-        <li className="hover:text-secondary cursor-pointer">Sobre</li>
-        <li className="hover:text-secondary cursor-pointer">Contato</li>
+      </Link>
+      <ul className="flex items-center justify-evenly gap-6 py-1 text-black/80">
+        {navItems.map(({ href, label, section: itemSection }) => (
+          <li key={itemSection}>
+            <Link href={href} className="relative block cursor-pointer hover:text-secondary">
+              {label}
+              {section === itemSection && <div className="absolute bottom-0 h-px w-full bg-primary" />}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
