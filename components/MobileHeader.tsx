@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import logo from '@/assets/images/logo-preta.svg';
 
 const navItems = [
   { label: 'Cadernos', href: '/#cadernos' },
@@ -25,7 +27,7 @@ function MobileHeader() {
     <>
       <nav className="fixed top-0 z-40 flex w-full items-center justify-between border-b border-black/10 bg-white/90 px-6 py-5 backdrop-blur-md md:hidden">
         <Link href="/" className="text-lg font-semibold uppercase text-primary transition-colors hover:text-secondary">
-          Rinardo Mesquita
+          <Image className="objetc-fit hover:opacity-80 transition-colors" src={logo} alt="logo" />
         </Link>
 
         <button
