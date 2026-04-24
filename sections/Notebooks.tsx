@@ -21,7 +21,7 @@ function Notebooks() {
           </p>
         </div>
         <Link
-          href="/notebooks"
+          href="/notebooks/categories/educacao"
           className="flex items-center gap-3 text-primary font-semibold text-lg underline w-full justify-end hover:opacity-80">
           <span>Ver todos os cadernos</span>
           <MoveRight size={18} />
