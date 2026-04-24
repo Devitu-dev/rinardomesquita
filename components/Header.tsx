@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import logo from '@/assets/images/logo-preta.svg';
+import Image from 'next/image';
 
 type TSections = 'home' | 'cadernos' | 'contato' | 'sobre';
 
@@ -50,8 +52,8 @@ function Header() {
 
   return (
     <nav className="fixed top-0 z-10 hidden w-full items-center justify-between border-b border-black/10 bg-white/80 px-10 py-5 backdrop-blur-md md:flex">
-      <Link href="/" className="text-xl font-semibold uppercase text-primary hover:text-secondary">
-        Rinardo Mesquita
+      <Link href="/" className="group transition-colors">
+        <Image className="objetc-fit hover:opacity-80 transition-colors" src={logo} alt="logo" />
       </Link>
       <ul className="flex items-center justify-evenly gap-6 py-1 text-black/80">
         {navItems.map(({ href, label, section: itemSection }) => (
