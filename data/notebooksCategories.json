@@ -1,25 +1,25 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "filosofia",
       "title": "Filosofia",
       "description": "Reflexões sobre existência, identidade, ética, sentido e os grandes temas do pensamento filosófico.",
       "cover": "/images/categories/filosofia-cover.jpg"
     },
     {
-      "id": 2,
+      "id": "educacao",
       "title": "Educação",
       "description": "Cadernos voltados para formação humana, aprendizagem e práticas educativas.",
       "cover": "/images/categories/educacao-cover.jpg"
     },
     {
-      "id": 5,
+      "id": "arte",
       "title": "Arte",
       "description": "Cadernos sobre sensibilidade, expressão, criação e experiência estética.",
       "cover": "/images/categories/arte-cover.jpg"
     },
     {
-      "id": 3,
+      "id": "espiritualidade",
       "title": "Espiritualidade",
       "description": "Conteúdos sobre interioridade, transcendência, presença e busca de sentido.",
       "cover": "/images/categories/espiritualidade-cover.jpg"
