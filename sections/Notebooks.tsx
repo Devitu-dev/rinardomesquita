@@ -21,7 +21,7 @@ function Notebooks() {
           </p>
         </div>
         <Link
-          href="/notebooks/categories/educacao"
+          href="/notebooks/categories"
           className="flex items-center gap-3 text-primary font-semibold text-lg underline w-full justify-end hover:opacity-80">
           <span>Ver todos os cadernos</span>
           <MoveRight size={18} />
@@ -34,7 +34,7 @@ function Notebooks() {
             title={title}
             description={description}
             cover={cover}
-            redirectoTo={`/notebooks/categories/${id}`}
+            redirectoTo="/notebooks/categories"
           />
         ))}
       </ul>
