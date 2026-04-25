@@ -100,13 +100,15 @@ function Notebook() {
           <div className="bg-white rounded-3xl border border-gray p-6">
             <span className="text-base text-black/80">Outros cadernos</span>
             <h3 className="text-black text-2xl font-medium mt-4">Continue a leitura</h3>
-            <div className="flex items-center gap-6 mt-10">
+            <ul className="flex items-center flex-wrap gap-6 mt-10">
               {othersNotebooks
                 .map(({ id, title, category }) => (
-                  <RecommendationNotebookCard key={id} id={id} title={title} category={category} />
+                  <li className="max-sm:w-full" key={id}>
+                    <RecommendationNotebookCard id={id} title={title} category={category} />
+                  </li>
                 ))
                 .slice(0, 3)}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
