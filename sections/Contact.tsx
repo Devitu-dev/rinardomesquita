@@ -8,14 +8,12 @@ function Contact() {
           <div className="space-y-6 text-left max-w-xl">
             <span className="block leading-relaxed font-normal text-black/80 text-xl">Contato</span>
             <h2 className="font-semibold text-3xl text-black">Vamos conversar?</h2>
-            <p className="text-black/80 font-normal text-xl">
-              Um convite simples para mensagens, trocas e conexões por meio dos canais da AMANI.
-            </p>
+            <p className="text-black/80 font-normal text-xl">Um convite simples para mensagens, trocas e conexões.</p>
           </div>
           <ul className="flex gap-4 items-center">
             <li className="px-4 py-2 rounded-2xl bg-gray text-primary hover:opacity-80">
-              <Link href="" target="_blank">
-                Youtube
+              <Link href="https://www.linkedin.com/in/rinardo-mesquita-b9bb0133a/" target="_blank">
+                Linkedin
               </Link>
             </li>
             <li className="px-4 py-2 rounded-2xl bg-gray text-primary hover:opacity-80">
@@ -24,8 +22,15 @@ function Contact() {
               </Link>
             </li>
             <li className="px-4 py-2 rounded-2xl bg-gray text-primary hover:opacity-80">
-              <Link href="https://www.linkedin.com/in/rinardo-mesquita-b9bb0133a/" target="_blank">
-                Linkedin
+              <Link
+                href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=7909FE7C0985C131E38880ABBF22E9E7.buscatextual_0"
+                target="_blank">
+                Lattes
+              </Link>
+            </li>
+            <li className="px-4 py-2 rounded-2xl bg-gray text-primary hover:opacity-80">
+              <Link href="https://ufc.academia.edu/Jos%C3%A9RinardoMesquita" target="_blank">
+                Academia.edu
               </Link>
             </li>
           </ul>
