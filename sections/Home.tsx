@@ -10,7 +10,7 @@ function Home() {
         backgroundImage: `url(${bg.src})`,
       }}
       id="home"
-      className="bg-right bg-no-repeat px-6 p-16 md:py-32">
+      className="bg-right bg-no-repeat px-6 py-32">
       <div className="max-w-360 mx-auto flex items-center md:justify-between justify-center flex-wrap-reverse md:gap-0">
         <div className="flex flex-col md:basis-1/2 w-full gap-8 items-center md:items-start">
           <span className="text-base text-primary py-2 px-4 bg-gray border border-primary/20 rounded-full">
@@ -34,7 +34,7 @@ function Home() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <Image className="" loading="eager" src={hero} alt="uma foto de Rinardo Mesquita" />
+          <Image className="object-fit max-w-md" loading="eager" src={hero} alt="uma foto de Rinardo Mesquita" />
         </div>
       </div>
     </section>
