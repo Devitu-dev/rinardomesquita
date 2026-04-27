@@ -51,20 +51,22 @@ function Header() {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-10 hidden w-full items-center justify-between border-b border-black/10 bg-white/80 px-10 py-5 backdrop-blur-md md:flex">
-      <Link href="/" className="group transition-colors">
-        <Image className="objetc-fit hover:opacity-80 transition-colors" src={logo} alt="logo" />
-      </Link>
-      <ul className="flex items-center justify-evenly gap-6 py-1 text-black/80">
-        {navItems.map(({ href, label, section: itemSection }) => (
-          <li key={itemSection}>
-            <Link href={href} className="relative block cursor-pointer hover:text-secondary">
-              {label}
-              {section === itemSection && <div className="absolute bottom-0 h-px w-full bg-primary" />}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="fixed top-0 z-10 hidden w-full border-b border-black/10 bg-white/80 px-10 py-5 backdrop-blur-md md:block">
+      <div className="max-w-360 mx-auto flex justify-between items-center">
+        <Link href="/" className="group transition-colors">
+          <Image className="objetc-fit hover:opacity-80 transition-colors" src={logo} alt="logo" />
+        </Link>
+        <ul className="flex items-center justify-evenly gap-6 py-1 text-black/80">
+          {navItems.map(({ href, label, section: itemSection }) => (
+            <li key={itemSection}>
+              <Link href={href} className="relative block cursor-pointer hover:text-secondary">
+                {label}
+                {section === itemSection && <div className="absolute bottom-0 h-px w-full bg-primary" />}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }
