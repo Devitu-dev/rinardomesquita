@@ -37,10 +37,14 @@ const offerings = [
     surfaceClass: 'border-primary/20 bg-linear-40 from-primary/14 to-gray/80',
     iconClass: 'bg-primary/12 text-primary',
     items: [
+      'Curso de Oratória',
+      'Curso de relações interpessoais na escola',
       'Formação de Lideranças Educacionais para Equidade',
       'Formação para lideranças estudantis',
-      'Produção Textual Científica e Criativa',
       'Formação em Educação Socioemocional',
+      'Meditação',
+      'Produção de textos científicos',
+      'Visualização Criativa',
     ],
   },
   {
