@@ -29,13 +29,14 @@ function Notebooks() {
       </div>
       <ul className="flex items-baseline justify-center gap-6 pb-4 flex-wrap">
         {categories.map(({ id, title, description, cover }) => (
-          <NotebookCategoryCard
-            key={id}
-            title={title}
-            description={description}
-            cover={cover}
-            redirectoTo="/notebooks/categories"
-          />
+          <li key={id}>
+            <NotebookCategoryCard
+              title={title}
+              description={description}
+              cover={cover}
+              href={`/notebooks/categories?category=${id}`}
+            />
+          </li>
         ))}
       </ul>
     </section>

@@ -5,15 +5,17 @@ import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '@/assets/images/logo-preta.svg';
+import { type NavSection, useNavContext } from '@/context/NavContext';
 
-const navItems = [
-  { label: 'Cadernos', href: '/#cadernos' },
-  { label: 'Sobre', href: '/#sobre' },
-  { label: 'Contato', href: '/#contato' },
+const navItems: Array<{ label: string; href: `/#${NavSection}`; section: NavSection }> = [
+  { label: 'Cadernos', href: '/#cadernos', section: 'cadernos' },
+  { label: 'Sobre', href: '/#sobre', section: 'sobre' },
+  { label: 'Contato', href: '/#contato', section: 'contato' },
 ];
 
 function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const { currentSection } = useNavContext();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -66,12 +68,15 @@ function MobileHeader() {
             </div>
 
             <ul className="flex flex-col gap-5 text-lg text-black/80">
-              {navItems.map(({ label, href }) => (
+              {navItems.map(({ label, href, section }) => (
                 <li key={href}>
                   <Link
                     href={href}
+                    aria-current={currentSection === section ? 'page' : undefined}
                     onClick={() => setIsOpen(false)}
-                    className="block border-b border-black/10 pb-3 transition-colors hover:text-secondary">
+                    className={`block border-b border-black/10 pb-3 transition-colors hover:text-secondary ${
+                      currentSection === section ? 'text-primary' : ''
+                    }`}>
                     {label}
                   </Link>
                 </li>

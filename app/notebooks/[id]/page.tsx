@@ -4,8 +4,9 @@ import { ArrowLeft, Minus, Plus } from 'lucide-react';
 import { notebooks } from '@/data/notebooks.json';
 import { getReadingLength } from '@/utils/reading';
 import { useParams, useRouter } from 'next/navigation';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import RecommendationNotebookCard from '@/components/RecommendationNotebookCard';
+import { type NotebookCategory, useNavContext } from '@/context/NavContext';
 
 const fontSizeMap = {
   sm: 16,
@@ -15,12 +16,19 @@ const fontSizeMap = {
 
 function Notebook() {
   const [fontSize, setFontSize] = useState(fontSizeMap.base);
+  const { setCurrentNotebookCategory } = useNavContext();
 
   const router = useRouter();
   const { id } = useParams<{ id: string }>();
 
   const notebook = useMemo(() => notebooks.find(({ id: notebookId }) => notebookId === id), [id]);
   const othersNotebooks = useMemo(() => notebooks.filter(({ id: notebookId }) => notebookId !== id), [id]);
+
+  useEffect(() => {
+    if (notebook) {
+      setCurrentNotebookCategory(notebook.category as NotebookCategory);
+    }
+  }, [notebook, setCurrentNotebookCategory]);
 
   const increaseFontSize = () => {
     setFontSize((prev) => {
@@ -54,6 +62,7 @@ function Notebook() {
       <div className="border-b border-gray">
         <div className="max-w-6xl mx-auto py-9 px-6 space-y-6">
           <button
+            type="button"
             onClick={() => router.back()}
             className="flex items-center gap-3 text-primary text-base hover:cursor-pointer hover:opacity-80">
             <ArrowLeft size={20} />
@@ -67,6 +76,7 @@ function Notebook() {
           </div>
           <div className="inline-flex items-center border-gray border rounded-[20px] text-black text-xl">
             <button
+              type="button"
               onClick={decreaseFontSize}
               style={{
                 backgroundColor: fontSize === fontSizeMap.sm ? 'rgba(235, 235, 235, 0.8)' : undefined,
@@ -77,6 +87,7 @@ function Notebook() {
               <span className="block">A</span>
             </button>
             <button
+              type="button"
               onClick={increaseFontSize}
               style={{
                 backgroundColor: fontSize === fontSizeMap.lg ? 'rgba(235, 235, 235, 0.8)' : undefined,
