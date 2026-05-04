@@ -10,7 +10,7 @@ function Contact() {
             <h2 className="font-semibold text-3xl text-black">Vamos conversar?</h2>
             <p className="text-black/80 font-normal text-xl">Um convite simples para mensagens, trocas e conexões.</p>
           </div>
-          <ul className="flex gap-4 items-center">
+          <ul className="flex gap-4 items-center flex-wrap">
             <li className="px-4 py-2 rounded-2xl bg-gray text-primary hover:opacity-80">
               <Link href="https://www.linkedin.com/in/rinardo-mesquita-b9bb0133a/" target="_blank">
                 Linkedin
