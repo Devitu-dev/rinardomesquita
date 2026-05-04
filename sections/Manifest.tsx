@@ -14,7 +14,7 @@ function Manifest() {
           Acolher o pensamento com profundidade, beleza e presença.
         </h2>
         <p className="text-black/80 font-normal text-xl">
-          Um site que não apenas informa, mas convida à pausa, ao encontro e à leitura com densidade.
+          Um site que não apenas informa, mas convida à pausa, ao encontro e à leitura com inteireza.
         </p>
         <Image className="mx-auto" src={logo} alt="logo" />
       </div>
