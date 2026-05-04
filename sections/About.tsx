@@ -65,9 +65,10 @@ function About() {
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <span className="block text-sm text-secondary">Atuação docente</span>
-              <strong className="mt-2 block text-lg font-semibold text-white">Rede pública e UNINTA</strong>
+              <strong className="mt-2 block text-lg font-semibold text-white">Rede pública e Universidade</strong>
               <p className="mt-2 text-sm leading-relaxed text-white/60">
-                Forma estudantes, professores, gestores, artistas e lideranças em experiências críticas e sensíveis.
+                Forma estudantes, professores e gestores escolares a partir de uma experiência crítica, sensível e
+                humanizadora.
               </p>
             </div>
           </div>
