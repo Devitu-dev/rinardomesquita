@@ -21,7 +21,7 @@ function NotebookCategoryCard({ cover, title, description, href }: TNotebookCate
           alt={`Imagem relacionada ao caderno ${title}`}
           width={350}
           height={150}
-          className="object-cover"
+          // className="object-top"
           loading="eager"
         />
       </div>
