@@ -56,6 +56,7 @@ function Notebook() {
   }
 
   const readingLength = getReadingLength(notebook.content);
+  const noteLines = notebook.note.trim().length >= 1 ? notebook.note.trim().split('\n') : [];
 
   return (
     <div className="pt-20">
@@ -107,6 +108,49 @@ function Notebook() {
               {paragraph}
             </p>
           ))}
+          {noteLines.length >= 1 && (
+            <section className="border-t border-black/10 pt-8 mt-10 space-y-4">
+              <h2 className="text-black font-semibold text-xl">Nota</h2>
+              <div className="space-y-3">
+                {noteLines.map((line, index) => {
+                  const repositoryUrl = line.startsWith('Acesso: ') ? line.replace('Acesso: ', '').trim() : null;
+
+                  return (
+                    <p
+                      key={`${line}-${index}`}
+                      className="text-justify font-normal text-black/80 text-base leading-relaxed">
+                      {repositoryUrl ? (
+                        <>
+                          Acesso:{' '}
+                          <a
+                            href={repositoryUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-primary underline underline-offset-4 hover:opacity-80">
+                            {repositoryUrl}
+                          </a>
+                        </>
+                      ) : (
+                        line
+                      )}
+                    </p>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+          {notebook.references.length >= 1 && (
+            <section className="border-t border-black/10 pt-8 mt-10 space-y-6">
+              <h2 className="text-black font-semibold text-xl">Referências</h2>
+              <ul className="space-y-4">
+                {notebook.references.map((reference) => (
+                  <li key={reference} className="text-justify font-normal text-black/80 text-base leading-relaxed">
+                    {reference}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
           <div className="my-8 bg-black/10 w-full h-px" />
           <div className="bg-white rounded-3xl border border-gray p-6">
             <span className="text-base text-black/80">Outros cadernos</span>
