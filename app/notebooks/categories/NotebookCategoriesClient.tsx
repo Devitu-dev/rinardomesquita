@@ -26,8 +26,8 @@ function NotebookCategoriesClient({ initialCategory }: NotebookCategoriesClientP
   }, [category, setCurrentNotebookCategory]);
 
   return (
-    <div className="pt-20">
-      <div className="border-b border-gray px-6">
+    <div className="pt-20 flex flex-col min-h-screen">
+      <div className="border-b border-gray px-6 md:px-10">
         <div className="max-w-6xl mx-auto py-9 space-y-6">
           <Link href="/#cadernos">
             <button className="flex items-center gap-3 text-primary text-base hover:cursor-pointer hover:opacity-80 mb-6">
@@ -44,7 +44,7 @@ function NotebookCategoriesClient({ initialCategory }: NotebookCategoriesClientP
           </p>
         </div>
       </div>
-      <div className="bg-gray/40 pb-20 px-6">
+      <div className="bg-gray/40 pb-20 px-6 md:px-10 flex-1">
         <div className="max-w-6xl mx-auto flex items-center gap-6 py-10 flex-wrap">
           <span className="text-black/80 text-lg">outras categorias:</span>
           <div className="flex items-center gap-6 flex-wrap">
