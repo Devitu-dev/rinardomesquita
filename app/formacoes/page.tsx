@@ -101,7 +101,7 @@ const principles = [
 function Formacoes() {
   return (
     <main className="pt-20">
-      <section className="bg-black px-6 py-16 text-white">
+      <section className="bg-black px-6 md:px-10 py-16 text-white">
         <div className="max-w-360 mx-auto space-y-10">
           <Link href="/#sobre" className="flex items-center gap-3 text-secondary transition hover:opacity-80">
             <ArrowLeft size={20} aria-hidden="true" />
@@ -120,7 +120,7 @@ function Formacoes() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16">
+      <section className="bg-white px-6 md:px-10 py-16">
         <div className="max-w-360 mx-auto space-y-10">
           <div className="max-w-3xl space-y-5">
             <span className="block text-xl text-black/70">Percursos disponíveis</span>

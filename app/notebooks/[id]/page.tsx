@@ -61,7 +61,7 @@ function Notebook() {
   return (
     <div className="pt-20">
       <div className="border-b border-gray">
-        <div className="max-w-6xl mx-auto py-9 px-6 space-y-6">
+        <div className="max-w-6xl mx-auto py-9 px-6 md:px-10 space-y-6">
           <button
             type="button"
             onClick={() => router.back()}
@@ -102,7 +102,7 @@ function Notebook() {
         </div>
       </div>
       <div className="bg-gray/40 pb-6">
-        <div className="max-w-6xl mx-auto px-6 py-8 space-y-4">
+        <div className="max-w-6xl mx-auto px-6 md:px-10 py-8 space-y-4">
           {notebook.content.split('\n\n').map((paragraph, index) => (
             <p style={{ fontSize }} key={index} className="text-justify font-normal text-black leading-relaxed">
               {paragraph}
