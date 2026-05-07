@@ -14,7 +14,7 @@ function NotebookCategoryCard({ cover, title, description, href }: TNotebookCate
   return (
     <Link
       href={href}
-      className="flex flex-col w-90 h-[440px] gap-7 rounded-4xl border border-secondary/25 bg-white p-6 transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
+      className="flex flex-col w-90 h-110 gap-7 rounded-4xl border border-secondary/25 bg-white p-6 transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
       <div className="relative z-0 w-full h-40 overflow-hidden rounded-2xl">
         <Image src={cover} alt={`Imagem relacionada ao caderno ${title}`} width={350} height={150} loading="eager" />
       </div>
