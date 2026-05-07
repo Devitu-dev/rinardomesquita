@@ -16,7 +16,7 @@ function Header() {
   const { currentSection } = useNavContext();
 
   return (
-    <nav className="fixed top-0 z-10 hidden w-full border-b border-black/10 bg-white/80 px-10 py-5 backdrop-blur-md md:block">
+    <nav className="fixed top-0 z-10 hidden w-full border-b border-black/10 bg-white/80 px-6 md:px-10 py-5 backdrop-blur-md md:block">
       <div className="max-w-360 mx-auto flex justify-between items-center">
         <Link href="/" className="group transition-colors">
           <Image className="objetc-fit hover:opacity-80 transition-colors" src={logo} alt="logo" />

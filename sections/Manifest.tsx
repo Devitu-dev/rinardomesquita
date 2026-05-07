@@ -8,7 +8,7 @@ function Manifest() {
       style={{
         backgroundImage: `url(${wallpaper.src})`,
       }}
-      className="flex flex-col justify-center items-center py-20 px-6">
+      className="flex flex-col justify-center items-center py-20 px-6 md:px-10">
       <div className="space-y-6 text-center max-w-xl">
         <h2 className="font-semibold text-3xl text-primary">
           Acolher o pensamento com profundidade, beleza e presença.

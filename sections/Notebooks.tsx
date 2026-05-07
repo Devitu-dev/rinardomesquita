@@ -11,7 +11,7 @@ function Notebooks() {
         backgroundImage: `url(${bg.src})`,
       }}
       id="cadernos"
-      className="bg-right bg-no-repeat bg-cover py-16 space-y-12 px-6">
+      className="bg-right bg-no-repeat bg-cover py-16 space-y-12 px-6 md:px-10">
       <div className="max-w-360 mx-auto flex items-baseline-last justify-between flex-wrap gap-6 md:gap-0">
         <div className="space-y-6 text-left max-w-xl">
           <span className="block leading-relaxed font-normal text-black/80 text-xl">Cadernos</span>

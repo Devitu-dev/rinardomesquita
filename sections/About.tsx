@@ -40,7 +40,7 @@ const timeline = [
 
 function About() {
   return (
-    <section id="sobre" className="bg-black px-6 py-20">
+    <section id="sobre" className="bg-black px-6 md:px-10 py-20">
       <div className="max-w-360 mx-auto grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div className="space-y-8">
           <div className="space-y-6 text-left">
