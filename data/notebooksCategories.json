@@ -13,16 +13,16 @@
       "cover": "/images/categories/educacao-cover.jpg"
     },
     {
-      "id": "arte",
-      "title": "Arte",
-      "description": "Cadernos sobre sensibilidade, expressão, criação e experiência estética.",
-      "cover": "/images/categories/arte-cover.jpeg"
-    },
-    {
       "id": "espiritualidade",
       "title": "Espiritualidade Eco-Relacional",
       "description": "Conteúdos sobre interioridade, transcendência, presença e busca de sentido.",
       "cover": "/images/categories/espiritualidade-cover.jpg"
+    },
+    {
+      "id": "arte",
+      "title": "Arte",
+      "description": "Cadernos sobre sensibilidade, expressão, criação e experiência estética.",
+      "cover": "/images/categories/arte-cover.jpeg"
     }
   ]
 }
