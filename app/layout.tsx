@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import MobileHeader from '@/components/MobileHeader';
 import NavContext from '@/context/NavContext';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -28,6 +29,7 @@ export default function RootLayout({
           <MobileHeader />
           {children}
         </NavContext>
+        <Footer />
       </body>
     </html>
   );
