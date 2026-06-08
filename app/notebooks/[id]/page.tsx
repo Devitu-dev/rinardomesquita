@@ -69,7 +69,7 @@ function Notebook() {
             <ArrowLeft size={20} />
             <span>voltar</span>
           </button>
-          <h1 className="text-black font-semibold text-5xl">{notebook.title}</h1>
+          <h1 className="text-black font-semibold text-3xl md:text-5xl">{notebook.title}</h1>
           <p className="text-black/80 text-lg">{notebook.description}</p>
           <div className="flex items-center gap-6">
             <span className="bg-gray text-primary px-4 py-2 rounded-2xl text-lg">{notebook.category}</span>
