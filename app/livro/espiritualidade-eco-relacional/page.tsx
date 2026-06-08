@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight, BookMarked, BookOpenText, Feather, Leaf, LibraryBig } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, BookOpenText, Feather, Leaf, LibraryBig } from 'lucide-react';
 import { ecoRelationalBook } from '@/data/ecoRelationalBook';
 
 export const metadata: Metadata = {
