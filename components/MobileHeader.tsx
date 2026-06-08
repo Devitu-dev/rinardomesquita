@@ -7,7 +7,10 @@ import Image from 'next/image';
 import logo from '@/assets/images/logo-preta.svg';
 import { type NavSection, useNavContext } from '@/context/NavContext';
 
-const navItems: Array<{ label: string; href: `/#${NavSection}`; section: NavSection }> = [
+const bookPath = '/livro/espiritualidade-eco-relacional';
+
+const navItems: Array<{ label: string; href: `/#${NavSection}` | typeof bookPath; section?: NavSection }> = [
+  { label: 'Livro', href: bookPath },
   { label: 'Cadernos', href: '/#cadernos', section: 'cadernos' },
   { label: 'Sobre', href: '/#sobre', section: 'sobre' },
   { label: 'Contato', href: '/#contato', section: 'contato' },
@@ -15,7 +18,7 @@ const navItems: Array<{ label: string; href: `/#${NavSection}`; section: NavSect
 
 function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const { currentSection } = useNavContext();
+  const { currentSection, pathname } = useNavContext();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -68,19 +71,23 @@ function MobileHeader() {
             </div>
 
             <ul className="flex flex-col gap-5 text-lg text-black/80">
-              {navItems.map(({ label, href, section }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    aria-current={currentSection === section ? 'page' : undefined}
-                    onClick={() => setIsOpen(false)}
-                    className={`block border-b border-black/10 pb-3 transition-colors hover:text-secondary ${
-                      currentSection === section ? 'text-primary' : ''
-                    }`}>
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map(({ label, href, section }) => {
+                const isActive = section ? pathname !== bookPath && currentSection === section : pathname === href;
+
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      aria-current={isActive ? 'page' : undefined}
+                      onClick={() => setIsOpen(false)}
+                      className={`block border-b border-black/10 pb-3 transition-colors hover:text-secondary ${
+                        isActive ? 'text-primary' : ''
+                      }`}>
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </aside>
         </>
