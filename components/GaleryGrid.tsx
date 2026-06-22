@@ -26,7 +26,6 @@ const captions = [
   'Exposição dos resultados da pesquisa de Mestrado em Sociobiodiversidade e Tecnologias Sustentáveis - UNILAB. Espaço Galpão da Cena - Itapipoca-CE.',
   'Práticas Corporais Interativas - Formação humana-relacional com docentes da Rede Pública Estadual de Itapipoca-CE. Ano: 2018-2019.',
   'Teias Formativas - Formação Pedagógica na Escola de Ensino Médio Coronel Murilo Serpa, Ano: 2008.',
-  'Palestra de Formação com equipe pedagógica da Secretaria Municipal de Educação de Itapipoca-CE. Ano, 2022.',
   'Seminário de Educação do Campo de Itapipoca-CE. Ano, 2022.',
   'Direção e encenação do espetáculo AUTO DA PAIXÃO DE DEUS, Ano 2009.',
   'Auto da Paixão de Deus: espetáculo teatral. ano 2009.',
