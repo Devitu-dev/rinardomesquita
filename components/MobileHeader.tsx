@@ -8,9 +8,15 @@ import logo from '@/assets/images/logo-preta.svg';
 import { type NavSection, useNavContext } from '@/context/NavContext';
 
 const bookPath = '/livro/espiritualidade-eco-relacional';
+const galeryPath = '/galery';
 
-const navItems: Array<{ label: string; href: `/#${NavSection}` | typeof bookPath; section?: NavSection }> = [
+const navItems: Array<{
+  label: string;
+  href: `/#${NavSection}` | typeof bookPath | typeof galeryPath;
+  section?: NavSection;
+}> = [
   { label: 'Livro', href: bookPath },
+  { label: 'Galeria', href: galeryPath },
   { label: 'Cadernos', href: '/#cadernos', section: 'cadernos' },
   { label: 'Sobre', href: '/#sobre', section: 'sobre' },
   { label: 'Contato', href: '/#contato', section: 'contato' },
@@ -72,7 +78,7 @@ function MobileHeader() {
 
             <ul className="flex flex-col gap-5 text-lg text-black/80">
               {navItems.map(({ label, href, section }) => {
-                const isActive = section ? pathname !== bookPath && currentSection === section : pathname === href;
+                const isActive = section ? pathname === '/' && currentSection === section : pathname === href;
 
                 return (
                   <li key={href}>

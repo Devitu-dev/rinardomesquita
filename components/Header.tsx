@@ -6,10 +6,16 @@ import Image from 'next/image';
 import { type NavSection, useNavContext } from '@/context/NavContext';
 
 const bookPath = '/livro/espiritualidade-eco-relacional';
+const galeryPath = '/galery';
 
-const navItems: Array<{ href: `/#${NavSection}` | typeof bookPath; label: string; section?: NavSection }> = [
+const navItems: Array<{
+  href: `/#${NavSection}` | typeof bookPath | typeof galeryPath;
+  label: string;
+  section?: NavSection;
+}> = [
   { href: '/#home', label: 'Home', section: 'home' },
   { href: bookPath, label: 'Livro' },
+  { href: galeryPath, label: 'Galeria' },
   { href: '/#cadernos', label: 'Cadernos', section: 'cadernos' },
   { href: '/#sobre', label: 'Sobre', section: 'sobre' },
   { href: '/#contato', label: 'Contato', section: 'contato' },
@@ -26,7 +32,7 @@ function Header() {
         </Link>
         <ul className="flex items-center justify-evenly gap-6 py-1 text-black/80">
           {navItems.map(({ href, label, section: itemSection }) => {
-            const isActive = itemSection ? pathname !== bookPath && currentSection === itemSection : pathname === href;
+            const isActive = itemSection ? pathname === '/' && currentSection === itemSection : pathname === href;
 
             return (
               <li key={href}>
