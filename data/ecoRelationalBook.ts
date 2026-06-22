@@ -21,7 +21,7 @@ export const ecoRelationalBook = {
   summary:
     'O livro propõe caminhos para o reencantamento da Educação a partir de encontros sensíveis, afetividade, solidariedade, participação crítica e cuidado com a inteireza humana. A espiritualidade eco-relacional aparece como modo de ser e atuar nas escolas e em outros espaços formativos, aproximando corpo, palavra, comunidade, natureza, fé, esperança e racionalidades plurais.',
   authorBio:
-    'Rinardo Mesquita é pedagogo, educador, ator e diretor teatral, professor da rede pública estadual do Ceará e professor universitário. Doutor em Educação pela Universidade Federal do Ceará, mestre em Sociobiodiversidade e Tecnologias Sustentáveis pela UNILAB-CE e especialista em Educação Biocêntrica, atua com formação de professoras(es), gestão educacional, arte, juventudes, espiritualidade, linguagem e psicanálise.',
+    'Rinardo Mesquita é Pedagogo, Filósofo e Psicanalista em formação. Doutor em Educação pela Universidade Federal do Ceará, mestre em Sociobiodiversidade e Tecnologias Sustentáveis pela UNILAB-CE e especialista em Educação Biocêntrica, atua com formação de professoras(es), gestão educacional, arte, juventudes, espiritualidade, linguagem e psicanálise.',
   chapters: [
     'Prefácio',
     'Primeiras tessituras: a teia como princípio organizador',
@@ -32,6 +32,7 @@ export const ecoRelationalBook = {
     'Considerações finais: a teia que não finda',
   ],
   themes: [
+    'Perspectiva Eco-Relacional',
     'Espiritualidade Eco-Relacional',
     'Formação docente',
     'Dialogicidade freireana',
