@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import MobileHeader from '@/components/MobileHeader';
 import NavContext from '@/context/NavContext';
 import Footer from '@/components/Footer';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -30,6 +32,8 @@ export default function RootLayout({
           {children}
         </NavContext>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
